@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class JenisPengaduan extends Model
@@ -22,9 +22,9 @@ class JenisPengaduan extends Model
         return $this->hasOne(DumasForm::class);
     }
     
-    public function pj(): BelongsTo
+    public function user(): HasMany
     {
-        return $this->belongsTo(User::class, 'pj_id');
+        return $this->hasMany(User::class, 'jenisPengaduan_id');
     }
 
 }

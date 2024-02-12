@@ -18,6 +18,7 @@ class UserSeeder extends Seeder
             [
                 'id' => 1,
                 'role_id' => 1,
+                'jenisPengaduan_id' => 1,
                 'nama' => 'Muhammad Rizky',
                 'email' => 'rizky@gmail.com',
                 'email_verified_at' => now(),
@@ -29,6 +30,7 @@ class UserSeeder extends Seeder
             [
                 'id' => 2,
                 'role_id' => 2,
+                'jenisPengaduan_id' => 2,
                 'nama' => 'Ihsan A',
                 'email' => 'ihsan@gmail.com',
                 'email_verified_at' => now(),
@@ -40,6 +42,7 @@ class UserSeeder extends Seeder
             [
                 'id' => 3,
                 'role_id' => 2,
+                'jenisPengaduan_id' => 2,
                 'nama' => 'Wiranto',
                 'email' => 'wiranto@gmail.com',
                 'email_verified_at' => now(),
@@ -51,6 +54,7 @@ class UserSeeder extends Seeder
             [
                 'id' => 4,
                 'role_id' => 3,
+                'jenisPengaduan_id' => 3,
                 'nama' => 'Penanggung Jawab 1',
                 'email' => 'test1@gmail.com',
                 'email_verified_at' => now(),
@@ -62,6 +66,7 @@ class UserSeeder extends Seeder
             [
                 'id' => 5,
                 'role_id' => 3,
+                'jenisPengaduan_id' => 2,
                 'nama' => 'Penanggung Jawab 2',
                 'email' => 'test2@gmail.com',
                 'email_verified_at' => now(),
@@ -73,8 +78,21 @@ class UserSeeder extends Seeder
             [
                 'id' => 6,
                 'role_id' => 3,
+                'jenisPengaduan_id' => 1,
                 'nama' => 'Penanggung Jawab 3',
                 'email' => 'test3@gmail.com',
+                'email_verified_at' => now(),
+                'password' => Hash::make('password'),
+                'remember_token' => '',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'id' => 7,
+                'role_id' => 3,
+                'jenisPengaduan_id' => 3,
+                'nama' => 'Penanggung Jawab 4',
+                'email' => 'test4@gmail.com',
                 'email_verified_at' => now(),
                 'password' => Hash::make('password'),
                 'remember_token' => '',

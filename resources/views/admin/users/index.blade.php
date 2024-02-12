@@ -9,9 +9,16 @@
                     <div class="card-body">
                         <!-- Card Body -->
 
+                        @if (session()->has('success'))
+                            <div class="alert alert-primary" role="alert">
+                                {{ session('success') }}
+                            </div>
+                        @endif
+
                         <h4 class="card-title mr-4 pr-4">Data Users / PJ</h4>
                         <div class="d-flex justify-content-end mb-3">
-                            <a href="{{ route('user-create') }}" class="btn btn-primary justify-content-end py-2 px-4">Tambah
+                            <a href="{{ route('user-create') }}"
+                                class="btn btn-primary justify-content-end py-2 px-4">Tambah
                                 User</a>
                         </div>
 
@@ -26,12 +33,12 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($dataUser as $user)
+                                @foreach ($dataUsers as $user)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $user->nama }}</td>
                                         <td>{{ $user->jenisPengaduan->nama }}</td>
-                                        <td>{{ $user->role }}</td>
+                                        <td>{{ $user->role->nama }}</td>
                                         <td>Edit | Delete</td>
                                     </tr>
                                 @endforeach

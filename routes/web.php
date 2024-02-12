@@ -41,5 +41,6 @@ Route::prefix('admin')->group(function () {
     Route::prefix('pj')->group(function() {
         Route::get('/', [UserController::class, 'index'])->name('user-index');
         Route::get('/create', [UserController::class, 'create'])->name('user-create');
+        Route::post('/create', [UserController::class, 'store'])->name('user-create-submit');
     });
 });
